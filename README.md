@@ -6,9 +6,7 @@
 erDiagram
     User ||--o{ JobListing : saves
     User ||--o{ SearchQuery : performs
-    User ||--o{ Report : generates
     JobListing }o--o{ Tag : contains
-    JobListing }o--|| Company : "posted by"
     SearchQuery ||--o{ SearchResult : produces
     SearchResult }o--|| JobListing : references
     
@@ -35,14 +33,6 @@ erDiagram
         string salaryRange
     }
     
-    Company {
-        string companyId PK
-        string name
-        string industry
-        string location
-        string size
-    }
-    
     Tag {
         string tagId PK
         string name
@@ -67,15 +57,6 @@ erDiagram
         float relevanceScore
     }
     
-    Report {
-        string reportId PK
-        string userId FK
-        string name
-        timestamp createdAt
-        json queryParams
-        json results
-        string type
-    }
 ```
 
 ## Entity Descriptions
