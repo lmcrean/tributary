@@ -1,9 +1,41 @@
-# Odyssey Version 2.00
+# Website
 
-[![Vitest](https://img.shields.io/badge/-Vitest-252525?style=flat&logo=vitest&logoColor=white)](https://vitest.dev/) [![Playwright](https://img.shields.io/badge/-Playwright-252525?style=flat&logo=playwright&logoColor=white)](https://playwright.dev/) [![React](https://img.shields.io/badge/-React-252525?style=flat&logo=react&logoColor=white)](https://react.dev/) [![TypeScript](https://img.shields.io/badge/-TypeScript-252525?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) [![AWS Amplify](https://img.shields.io/badge/-AWS%20Amplify-252525?style=flat&logo=awsamplify&logoColor=white)](https://aws.amazon.com/amplify/)
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-## Project Overview
+### Installation
 
-Odyssey is a web application with essential social media features. It is built with React, TypeScript, and AWS Amplify.
+```
+$ yarn
+```
 
+### Local Development
 
+```
+$ yarn start
+```
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+### Build
+
+```
+$ yarn build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+Using SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
