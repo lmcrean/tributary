@@ -11,7 +11,6 @@ Welcome to the Tributary documentation! This documentation will help you underst
 - [Architecture Decisions](./architecture_decisions.md) - Learn about the key architectural decisions and their rationales
 - [Test Coverage](./test_coverage.md) - View the current test coverage and testing practices
 - [Contributing Guide](./contributing.md) - Learn how to contribute to the project
-- [Code of Conduct](./code_of_conduct.md) - Our community guidelines
 
 ## Getting Started
 
@@ -37,4 +36,3 @@ tributary/
 
 - Review our [Architecture Decisions](./architecture_decisions.md) to understand the project's design
 - Check out the [Contributing Guide](./contributing.md) to start contributing
-- Join our community and follow our [Code of Conduct](./code_of_conduct.md)
