@@ -38,11 +38,6 @@ const sidebars: SidebarsConfig = {
           id: 'contributing',
           label: 'Contributing',
         },
-        {
-          type: 'doc',
-          id: 'code_of_conduct',
-          label: 'Code of Conduct',
-        },
       ],
     },
   ],
