@@ -10,14 +10,14 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-org.github.io',
+  url: 'https://lmcrean.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/tributary/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-org', // Usually your GitHub org/user name.
+  organizationName: 'lmcrean', // Usually your GitHub org/user name.
   projectName: 'tributary', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -39,7 +39,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/your-org/tributary/tree/main/docs/',
+            'https://github.com/lmcrean/tributary/tree/main/docs/',
         },
         blog: false,
         theme: {
@@ -71,7 +71,7 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: 'https://github.com/your-org/tributary',
+          href: 'https://github.com/lmcrean/tributary',
           label: 'GitHub',
           position: 'right',
         },
@@ -94,7 +94,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/your-org/tributary',
+              href: 'https://github.com/lmcrean/tributary',
             },
           ],
         },
