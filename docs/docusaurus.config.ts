@@ -40,6 +40,7 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/lmcrean/tributary/tree/main/docs/',
+          routeBasePath: '/', // Set docs as the root
         },
         blog: false,
         theme: {
@@ -62,6 +63,7 @@ const config: Config = {
       logo: {
         alt: 'Tributary Logo',
         src: 'img/logo.svg',
+        href: '/',
       },
       items: [
         {
@@ -85,7 +87,7 @@ const config: Config = {
           items: [
             {
               label: 'Documentation',
-              to: '/docs/intro',
+              to: '/',
             },
           ],
         },
