@@ -17,3 +17,6 @@
 - As a user I want a keyboard shortcut "ctrl+v" to quickly paste the job listing.
 - As a user, I want to be able to colour code my keywords so I can identify skills I have vs skills I am acquiring.
 - As a user I want to be able to delete unwanted keywords as an overriding function if I want to.
+
+## Could have
+- As a user I could have an AI feature that automatically adds "company (job title)" to the job listing heading.
