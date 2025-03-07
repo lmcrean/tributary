@@ -37,6 +37,7 @@ erDiagram
         int keywordId PK
         int userId FK
         string name
+        timestamp lastUpdated "calculated on read"
         string status "have/learning/need"
         string colorCode "HEX"
         boolean isCustom
