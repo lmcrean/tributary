@@ -13,6 +13,15 @@ This directory contains diagrams and documentation for key network calls and dat
 - [Save Job Listing](./save_job_listing.md) - How job listings are saved and processed
 - [Create Keyword](./create_keyword.md) - How keywords are created and counted
 
+## MVP Focus
+
+The current diagrams focus on the core MVP functionality:
+- Keyword tracking and counting
+- Job listing management
+- Real-time updates of keyword mentions
+
+Status categorization (have/learning/need) and color coding have been intentionally omitted from the MVP documentation to maintain focus on the essential counting feature.
+
 ## Diagram Conventions
 
 - All diagrams use the same dark theme for consistency
@@ -53,7 +62,7 @@ Both operations follow these consistent architectural patterns:
 
 ## Alignment with System Design
 
-These network calls directly support the ERD relationships:
+These network calls directly support the core ERD relationships:
 - User-JobListing: Save Job Listing flow
 - User-UserKeyword: Create Keyword flow
 - JobListing-UserKeyword: Both flows handle the many-to-many relationship by calculating mentions 
