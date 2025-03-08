@@ -76,11 +76,20 @@ sequenceDiagram
         
         Queue->>Worker: Process keyword counting task
         
+        Worker->>Cache: Check for user's job listings data
+        Cache-->>Worker: Return cache hit/miss
+        
+        alt Cache Miss
+            Worker->>Database: Get pagination metadata for job listings
+            Database-->>Worker: Return pagination data
+            Worker->>Cache: Update cache with pagination data
+        end
+        
         Worker->>Database: Get user's job listings (paginated, batch 1)
         Database-->>Worker: Return batch 1 job listings
         Worker->>Worker: Calculate keyword mentions for batch 1
         
-        loop Until all job listings processed
+        loop Until all job listings processed (batch size: 25)
             Worker->>Database: Get next batch of job listings
             Database-->>Worker: Return next batch
             Worker->>Worker: Calculate keyword mentions for batch
