@@ -1,6 +1,7 @@
 ## Entity Relationship Diagram
 
 ```mermaid
+%%{init: {'theme': 'dark', 'themeVariables': { 'primaryTextColor': '#ffffff', 'primaryColor': '#ffffff', 'noteBkgColor': '#2b2b2b', 'noteTextColor': '#ffffff' }}}%%
 erDiagram
     User ||--o{ JobListing : saves
     User ||--o{ UserKeyword : tracks
