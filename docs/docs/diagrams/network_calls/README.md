@@ -23,10 +23,37 @@ This directory contains diagrams and documentation for key network calls and dat
 
 ## Common Architecture Patterns
 
-Several architectural patterns are used consistently across the system:
+Both operations follow these consistent architectural patterns:
 
-1. **Caching Layer** - Reduces database load and improves response times
-2. **Asynchronous Processing** - Keeps the UI responsive during heavy operations
-3. **Batch Processing** - Ensures AWS free tier compatibility
-4. **Progressive Loading** - Provides immediate feedback while processing continues
-5. **Real-time Updates** - Uses WebSockets/SSE for pushing updates to the frontend 
+1. **Caching Layer**:
+   - All user data access first checks cache
+   - Cache misses automatically populate cache
+   - Both API and Workers utilize the cache
+
+2. **Asynchronous Processing**:
+   - Heavy computations are offloaded to background workers
+   - SQS queues decouple the operations
+   - Initial quick responses followed by push notifications
+
+3. **Batch Processing & Pagination**:
+   - Both operations process data in batches of 25
+   - Save Job Listing - Processes keywords in batches
+   - Create Keyword - Processes job listings in batches
+   - Ensures operations stay within AWS free tier limits
+
+4. **Progressive Loading Pattern**:
+   - All operations return immediate success response
+   - Background processing continues asynchronously
+   - WebSocket/SSE used to push updates to the frontend
+
+5. **Resilience First Design**:
+   - Core functionalities (saving/creating) work even if background processing fails
+   - Cache fallbacks ensure system degradation is graceful
+   - Consistent messaging scheme for all WebSocket/SSE communications
+
+## Alignment with System Design
+
+These network calls directly support the ERD relationships:
+- User-JobListing: Save Job Listing flow
+- User-UserKeyword: Create Keyword flow
+- JobListing-UserKeyword: Both flows handle the many-to-many relationship by calculating mentions 
