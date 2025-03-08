@@ -14,7 +14,7 @@ sequenceDiagram
 
     User->>Frontend: Clicks "+ Add Custom Keyword" button
     Frontend->>Frontend: Displays keyword creation modal
-    User->>Frontend: Enters keyword name, selects status, color
+    User->>Frontend: Enters keyword name
     User->>Frontend: Clicks "Save Keyword" button
     Frontend->>API: POST /api/keywords/create
     API->>Database: Check if keyword already exists for user
@@ -48,7 +48,7 @@ sequenceDiagram
 
     User->>Frontend: Clicks "+ Add Custom Keyword" button
     Frontend->>Frontend: Displays keyword creation modal
-    User->>Frontend: Enters keyword name, selects status, color
+    User->>Frontend: Enters keyword name
     User->>Frontend: Clicks "Save Keyword" button
     Frontend->>API: POST /api/keywords/create
     
@@ -109,9 +109,7 @@ sequenceDiagram
 ```json
 // POST /api/keywords/create request
 {
-  "name": "TypeScript",
-  "status": "learning",
-  "colorCode": "#FFCC00"
+  "name": "TypeScript"
 }
 
 // Initial success response (immediate)
@@ -120,8 +118,6 @@ sequenceDiagram
   "keyword": {
     "keywordId": 123,
     "name": "TypeScript",
-    "status": "learning",
-    "colorCode": "#FFCC00",
     "isCustom": true,
     "totalMentions": "calculating..."
   }
