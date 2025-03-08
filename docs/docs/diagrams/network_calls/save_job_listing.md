@@ -114,11 +114,11 @@ sequenceDiagram
   "type": "KEYWORD_COUNT_UPDATED",
   "listingId": 456,
   "keywordStats": [
-    { "keyword": "JavaScript", "newCount": 12, "status": "have" },
-    { "keyword": "React", "newCount": 8, "status": "learning" },
-    { "keyword": "Python", "newCount": 5, "status": "need" },
-    { "keyword": "SQL", "newCount": 3, "status": "have" },
-    { "keyword": "AWS", "newCount": 2, "status": "learning" }
+    { "keyword": "JavaScript", "newCount": 12 },
+    { "keyword": "React", "newCount": 8 },
+    { "keyword": "Python", "newCount": 5 },
+    { "keyword": "SQL", "newCount": 3 },
+    { "keyword": "AWS", "newCount": 2 }
   ]
 }
 ```
