@@ -49,4 +49,4 @@ e2e/.auth/
 
 .env.test
 
-tributary.mdc
+docs/docs/product/*
