@@ -12,24 +12,22 @@ sequenceDiagram
     participant API
     participant Database
 
+    User->>Frontend: Pastes job ad text (Ctrl+V)
+    Frontend->>Frontend: Displays job in editable text box
+    Note over Frontend: First line becomes custom heading
     User->>Frontend: Clicks "Save Job" button
     Frontend->>API: POST /api/jobs/save
-    Note over Frontend,API: Sends minimal job data (title, company, URL, text)
-    API->>Database: Check if job already saved by user
-    alt Job already saved
-        Database-->>API: Return existing job
-        API-->>Frontend: Return "Already saved" status
-        Frontend-->>User: Show "Already saved" message
-    else Job not yet saved
-        API->>API: Extract keywords from job text
-        Note over API: Only extract keywords user is tracking
-        API->>Database: Save job listing
-        API->>Database: Update keyword counts (batch operation)
-        Database-->>API: Confirm save
-        API-->>Frontend: Return success + updated keyword stats
-        Frontend-->>User: Show "Job saved" confirmation
-        Frontend->>Frontend: Update keyword counts in UI
-    end
+    Note over Frontend,API: Sends job data (heading, full text)
+    API->>Database: Get user's tracked keywords
+    Database-->>API: Return user's keyword list
+    API->>API: Search job text for user's tracked keywords only
+    Note over API: No general keyword extraction performed
+    API->>Database: Save job listing
+    API->>Database: Update keyword counts (batch operation)
+    Database-->>API: Confirm save
+    API-->>Frontend: Return success + updated keyword stats
+    Frontend-->>User: Show "Job saved" confirmation
+    Frontend->>Frontend: Update keyword counts in UI
 ```
 
 ### Cost Optimization Strategies
@@ -59,10 +57,8 @@ sequenceDiagram
 ```json
 // POST /api/jobs/save request
 {
-  "company": "Acme Inc",
-  "jobTitle": "Senior Developer",
+  "heading": "Senior Developer at Acme Inc",
   "fullText": "Job description text...",
-  "sourceUrl": "https://example.com/job/123"
 }
 
 // Success response
