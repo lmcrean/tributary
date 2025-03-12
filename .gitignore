@@ -50,3 +50,9 @@ e2e/.auth/
 .env.test
 
 docs/docs/product/*
+product-model/*
+
+# Sensitive pricing information
+docs/docs/product/pricing_model.md
+
+tributary.mdc

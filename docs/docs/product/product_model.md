@@ -7,7 +7,9 @@ This document provides an overview of Tributary's monetization strategy and prod
 Tributary uses a freemium model with two tiers:
 
 1. **Free Tier with Ads**: Basic functionality with strict limits and Google AdSense integration
-2. **Premium Tier (£1.99/month)**: Expanded functionality, higher limits, and no ads
+2. **Premium Tier**: Expanded functionality, higher limits, and no ads
+
+For detailed pricing information, see private file [Pricing Model](pricing_model.md).
 
 ## Key Constraints
 
@@ -33,13 +35,3 @@ For more detailed information, see the following documents:
 | Validation | User acquisition, usage analysis | Months 5-6 |
 | Decision Point | Continue, pivot, or sunset based on metrics | End of Month 6 |
 
-## Budget Allocation (£50 Maximum)
-
-| Month | Target Activities | Budget Allocation | Cumulative Total |
-|-------|------------------|-------------------|------------------|
-| 1 | AWS setup, initial deployment | £10 | £10 |
-| 2 | Core functionality implementation | £10 | £20 |
-| 3 | AdSense integration | £0 | £20 |
-| 4 | Limited promotion, bug fixes | £10 | £30 |
-| 5 | Additional features if budget allows | £10 | £40 |
-| 6 | Reserve for unexpected costs | £10 | £50 |

@@ -1,11 +1,11 @@
 # Tier Comparison
 
-This document details the feature differences between Tributary's free and premium tiers.
+This document details the feature differences between Tributary's free and premium tiers. For pricing information, see [Pricing Model](pricing_model.md).
 
 ## Feature Comparison Table
 
-| Feature | Free Tier | Premium Tier (£1.99/month) |
-|---------|-----------|----------------------------|
+| Feature | Free Tier | Premium Tier |
+|---------|-----------|--------------|
 | **Saved Job Listings** | 5 max | Unlimited |
 | **Tracked Keywords** | 10 max | Unlimited |
 | **Keyword Analytics** | Basic counts only | Advanced trends + Popular skill analysis |
